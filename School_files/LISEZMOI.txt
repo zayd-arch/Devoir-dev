@@ -1,0 +1,23 @@
+INSTALLATION
+
+1) composer create-project laravel/laravel School
+2) cd School
+3) composer require laravel/ui
+   php artisan ui bootstrap
+   npm install
+   npm run dev
+   composer require laravel/breeze --dev
+   (ne PAS lancer "php artisan breeze:install" : il remplacerait les fichiers de ce dossier par des vues Tailwind en anglais)
+4) Copier les dossiers de ce zip dans le dossier School (accepter le remplacement) :
+   app/  database/  resources/  routes/  public/
+5) Copier les lignes de env_snippet.txt dans le fichier .env
+6) Importer school.sql dans phpMyAdmin (base "school"),
+   OU creer une base "school" vide puis : php artisan migrate
+   (pas les deux, la table existerait deja)
+7) php artisan serve
+
+PAGES
+http://127.0.0.1:8000/            accueil
+http://127.0.0.1:8000/students    gestion des etudiants
+http://127.0.0.1:8000/register    inscription
+http://127.0.0.1:8000/login       connexion
